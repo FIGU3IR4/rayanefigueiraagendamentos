@@ -86,7 +86,7 @@ spring.jpa.show-sql=true
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/rayane-figueira-agendamentos.git
+git clone https://github.com/figu3ir4/rayane-figueira-agendamentos.git
 
 
 Acesse a pasta do projeto:
