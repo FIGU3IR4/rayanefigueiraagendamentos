@@ -21,11 +21,8 @@ public class Agendamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String numeroTelefone;
-
 
     private LocalDate data;
-
 
     private LocalTime horario;
 
