@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.rayanefigueira.service.AgendamentoService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -23,9 +24,13 @@ public class AgendamentoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Agendamento>> listar() {
+    public ResponseEntity<List<Agendamento>> listar(@RequestParam(required = false) LocalDate data) {
+        if (data != null) {
+            return ResponseEntity.ok(service.listarPorData(data));
+        }
         return ResponseEntity.ok(service.listarTodos());
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> cancelar(@PathVariable Long id) {

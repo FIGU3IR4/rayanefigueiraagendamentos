@@ -2,15 +2,21 @@ package com.example.rayanefigueira.dto;
 
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Data
 public class AgendamentoRequestDTO {
-
     private String nome;
-    private LocalDate data;
-    private LocalTime horario;
-    private String servico;
 
-    // getters e setters
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate data;
+
+    @JsonFormat(pattern = "HH:mm")
+    private LocalTime horario;
+
+    private String servico;
 }

@@ -5,6 +5,7 @@ import com.example.rayanefigueira.model.StatusAgendamento;
 import org.springframework.stereotype.Service;
 import com.example.rayanefigueira.repository.AgendamentoRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -35,6 +36,10 @@ public class AgendamentoService {
 
     public List<Agendamento> listarTodos() {
         return agendamentoRepository.findAll();
+    }
+
+    public List<Agendamento> listarPorData(LocalDate data) {
+        return agendamentoRepository.findByData(data);
     }
 
     public void cancelar(Long id) {
