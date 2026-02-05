@@ -9,13 +9,10 @@ O projeto foi construído com as seguintes tecnologias e ferramentas:
 - **Java 17** (ou versão superior)
 - **Spring Boot 3**
 - **Spring Data JPA** para persistência de dados
-- **Spring Security** (Autenticação via JWT se implementado)
-- **PostgreSQL / MySQL** (Banco de dados relacional)
+- **PostgreSQL** (Banco de dados relacional)
 - **Hibernate** como provedor ORM
 - **Maven** para gerenciamento de dependências
-- **Validation** (Bean Validation para regras de entrada)
 - **Docker** para containerização da aplicação e banco de dados
-- **Swagger (OpenAPI)** para documentação interativa
 
 ## ✨ Funcionalidades (Previstas/Implementadas)
 
